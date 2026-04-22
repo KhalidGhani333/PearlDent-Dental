@@ -1,0 +1,77 @@
+import { Reveal } from "./Section";
+import { BadgeCheck } from "lucide-react";
+
+const reviews = [
+  { name: "Sarah M.", area: "Marylebone", text: "I've been nervous about dentists my whole life, but the team at PearlDent completely changed that. Dr. Whitfield is incredibly gentle and always explains everything. Best dental experience I've ever had." },
+  { name: "James T.", area: "Fitzrovia", text: "Had composite bonding on 6 teeth — the results are absolutely stunning. I can't stop smiling! Professional, friendly, and honestly worth every penny." },
+  { name: "Priya K.", area: "Paddington", text: "Booked for a dental emergency on a Tuesday morning and was seen by 2pm the same day. Outstanding service and brilliant results. Could not recommend more highly." },
+  { name: "Robert C.", area: "St John's Wood", text: "The whole family comes here now, including our two young children who actually look forward to their check-ups. The staff are so patient and welcoming." },
+  { name: "Emma L.", area: "Mayfair", text: "My Invisalign treatment with Dr. Sharma was seamless from start to finish. The results are better than I'd hoped for. Brilliant practice — 5 stars without hesitation." },
+];
+
+function GoogleG() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 48 48" aria-hidden>
+      <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/>
+      <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 16 19 13 24 13c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.6 8.3 6.3 14.7z"/>
+      <path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/>
+      <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.2 4.3-4.1 5.7l6.2 5.2C41.2 36.5 44 30.7 44 24c0-1.3-.1-2.4-.4-3.5z"/>
+    </svg>
+  );
+}
+
+function ReviewCard({ r }: { r: typeof reviews[number] }) {
+  return (
+    <div className="w-[340px] shrink-0 rounded-2xl bg-white p-6 shadow-soft md:w-[380px]">
+      <div className="flex items-start justify-between">
+        <div className="flex items-center gap-2">
+          <div className="font-semibold text-navy">{r.name}</div>
+          <BadgeCheck className="h-4 w-4 text-blue-500" />
+        </div>
+        <GoogleG />
+      </div>
+      <div className="text-xs text-muted-foreground">{r.area} · Google Review</div>
+      <div className="mt-2 text-gold tracking-widest">★★★★★</div>
+      <p className="mt-3 text-sm text-navy/80 leading-relaxed">{r.text}</p>
+    </div>
+  );
+}
+
+export function Reviews() {
+  return (
+    <section className="bg-white py-24 md:py-28 overflow-hidden">
+      <div className="mx-auto max-w-7xl px-6 md:px-12">
+        <Reveal className="text-center">
+          <h2 className="mx-auto max-w-3xl font-serif text-4xl text-navy md:text-5xl">
+            Read What Our Patients Say — Real Stories, Real Smiles
+          </h2>
+        </Reveal>
+
+        <div className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-[300px_1fr] md:items-center">
+          <Reveal className="text-center md:text-left">
+            <div className="font-serif text-5xl font-bold text-teal">EXCELLENT</div>
+            <div className="mt-2 text-2xl tracking-widest text-gold">★★★★★</div>
+            <div className="mt-2 text-muted-foreground">Based on 1,100+ verified reviews</div>
+            <div className="mt-4 flex items-center justify-center gap-2 md:justify-start">
+              <GoogleG />
+              <span className="font-semibold text-navy">Google Reviews</span>
+            </div>
+          </Reveal>
+
+          <div className="group relative -mr-6 overflow-hidden md:-mr-12">
+            <div className="flex animate-scroll-x gap-5 pause-on-hover" style={{ width: "max-content" }}>
+              {[...reviews, ...reviews].map((r, i) => (
+                <ReviewCard key={i} r={r} />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12 flex flex-wrap justify-center gap-3">
+          <button className="rounded-full bg-teal px-7 py-3 font-medium text-white hover:bg-navy transition">Book Appointment</button>
+          <button className="rounded-full border-2 border-teal px-7 py-3 font-medium text-teal hover:bg-teal hover:text-white transition">Call Us</button>
+        </div>
+      </div>
+    </section>
+  );
+}
