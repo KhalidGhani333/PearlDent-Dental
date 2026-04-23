@@ -14,7 +14,7 @@ const posts = [
 export function Blog() {
   return (
     <section className="bg-soft py-24 md:py-28">
-      <div className="mx-auto max-w-7xl px-6 md:px-12">
+      <div className="mx-auto max-w-6xl px-6 md:px-12">
         <Reveal className="text-center">
           <TealLabel>Dental Advice & News</TealLabel>
           <h2 className="mt-3 font-serif text-4xl text-navy md:text-5xl">From Our Blog</h2>

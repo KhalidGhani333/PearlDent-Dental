@@ -50,9 +50,11 @@ export function Hours() {
           <div className="relative h-full min-h-[400px] overflow-hidden rounded-2xl shadow-pearl">
             <iframe
               title="PearlDent location"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-0.1517%2C51.5180%2C-0.1417%2C51.5230&layer=mapnik&marker=51.5205%2C-0.1467"
-              className="h-full w-full"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.887222530113!2d-0.1488092842297746!3d51.518131379636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ad434f07a75%3A0x6734138a0a190f89!2s22%20Harley%20St%2C%20London%20W1G%209PL!5e0!3m2!1sen!2suk!4v1713876543210!5m2!1sen!2suk"
+              className="h-full w-full border-0"
+              allowFullScreen={true}
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
             <div className="absolute bottom-4 left-4 right-4 rounded-xl bg-white/95 p-4 shadow-pearl backdrop-blur md:right-auto md:max-w-xs">
               <div className="flex items-start gap-2">

@@ -21,7 +21,7 @@ export function Team() {
 
   return (
     <section className="bg-soft py-24 md:py-28">
-      <div className="mx-auto max-w-7xl px-6 md:px-12">
+      <div className="mx-auto max-w-6xl px-6 md:px-12">
         <Reveal className="text-center">
           <TealLabel>Our Dental Team</TealLabel>
           <h2 className="mx-auto mt-3 max-w-3xl font-serif text-4xl text-navy md:text-5xl">
@@ -51,16 +51,18 @@ export function Team() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
                   whileHover={{ y: -8 }}
-                  className="group overflow-hidden rounded-2xl bg-white shadow-soft ring-1 ring-transparent transition hover:ring-teal"
+                  className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-soft ring-1 ring-transparent transition hover:ring-teal"
                 >
                   <div className="aspect-[3/4] overflow-hidden bg-teal">
                     <img src={m.img} alt={m.name} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   </div>
-                  <div className="bg-navy p-4 text-white">
-                    <div className="font-serif text-xl">{m.name}</div>
-                    <div className="text-xs text-white/60">{m.creds}</div>
-                    <div className="mt-2 text-sm font-medium text-teal-light">{m.role}</div>
-                    <div className="mt-2 text-[11px] text-white/60">
+                  <div className="flex flex-1 flex-col justify-between bg-navy p-4 text-white">
+                    <div>
+                      <div className="font-serif text-xl">{m.name}</div>
+                      <div className="text-xs text-white/60">{m.creds}</div>
+                      <div className="mt-2 text-sm font-medium text-teal-light">{m.role}</div>
+                    </div>
+                    <div className="mt-4 text-[11px] text-white/60">
                       GDC: {m.gdc} · {m.interest}
                     </div>
                   </div>

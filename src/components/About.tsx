@@ -13,13 +13,13 @@ const ticks = [
 export function About() {
   return (
     <section className="bg-white py-24 md:py-32">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-16 px-6 md:grid-cols-2 md:px-12 md:gap-12">
-        <Reveal variant={slideInLeft} className="relative">
-          <div className="relative">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-16 px-6 md:grid-cols-2 md:px-12 md:gap-12 md:items-center">
+        <Reveal variant={slideInLeft} className="relative mx-auto w-full max-w-lg md:max-w-none">
+          <div className="relative mx-auto max-w-md lg:max-w-lg">
             <img
               src={patient}
               alt="Smiling patient at PearlDent"
-              className="h-[480px] w-full rounded-2xl object-cover shadow-pearl md:h-[560px]"
+              className="h-[400px] w-full rounded-2xl object-cover shadow-pearl md:h-[480px]"
               width={1024}
               height={1280}
               loading="lazy"
@@ -27,14 +27,11 @@ export function About() {
             <img
               src={dentist}
               alt="Dentist with patient"
-              className="absolute -bottom-10 -right-4 hidden h-56 w-56 rounded-2xl object-cover shadow-pearl ring-8 ring-white sm:block md:h-64 md:w-64"
+              className="absolute -bottom-10 -right-4 hidden h-48 w-48 rounded-2xl object-cover shadow-pearl ring-8 ring-white sm:block md:h-56 md:w-56"
               width={400}
               height={400}
               loading="lazy"
             />
-            <div className="absolute -bottom-5 left-4 rounded-full bg-teal px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-white shadow-pearl">
-              GDC Registered · CQC Regulated
-            </div>
           </div>
         </Reveal>
 

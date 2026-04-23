@@ -17,16 +17,10 @@ const services = [
   "Gum Disease Treatment", "HydraFacial", "Anti-Wrinkle Injections", "Smile Makeovers",
 ];
 
-const justForYou = [
-  { img: b1, title: "How to Stop Grinding Teeth in Sleep Naturally?", excerpt: "Bruxism affects millions — discover natural remedies and night guard options that actually work." },
-  { img: b2, title: "Why Are My Teeth Sensitive to Cold?", excerpt: "Cold sensitivity has many causes — from worn enamel to gum recession. Here's what to know." },
-  { img: b3, title: "Best Dentist in London — What to Look For", excerpt: "Choosing the right private practice in London? These are the credentials and qualities that matter." },
-];
-
 export function Footer() {
   return (
     <footer className="bg-navy text-white">
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-3 md:px-12">
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-2 md:px-12">
         <div>
           <div className="rounded-xl bg-white/95 p-3 inline-block">
             <Logo />
@@ -68,34 +62,11 @@ export function Footer() {
             ))}
           </ul>
         </div>
-
-        <div>
-          <h3 className="font-serif text-2xl text-teal-light">Just For You</h3>
-          <div className="mt-5 space-y-4">
-            {justForYou.map((p) => (
-              <a href="#" key={p.title} className="group flex gap-3">
-                <img src={p.img} alt="" loading="lazy" className="h-16 w-20 shrink-0 rounded-lg object-cover" />
-                <div>
-                  <div className="text-sm font-semibold text-white group-hover:text-teal-light transition">{p.title}</div>
-                  <div className="text-xs text-white/60 line-clamp-2">{p.excerpt}</div>
-                </div>
-              </a>
-            ))}
-          </div>
-          <button className="mt-6 inline-flex items-center gap-2 rounded-full border-2 border-teal-light px-5 py-2.5 text-sm font-medium text-teal-light transition hover:bg-teal-light hover:text-navy">
-            Blog & Newsroom <ArrowRight className="h-4 w-4" />
-          </button>
-        </div>
       </div>
       <div className="border-t border-white/10 bg-black/20">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-5 text-xs text-white/55 md:flex-row md:justify-between md:px-12">
-          <div>
-            © 2026 PearlDent Care &amp; Aesthetics Ltd · Registered in England &amp; Wales No. 09471623 · GDC Practice No. 45821 · CQC Reg No. 1-20629579981
-          </div>
-          <div className="space-x-3">
-            <a href="#" className="hover:text-teal-light">Privacy Policy</a>·
-            <a href="#" className="hover:text-teal-light">Terms &amp; Conditions</a>·
-            <a href="#" className="hover:text-teal-light">Cookie Policy</a>
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-5 text-sm text-white/55 md:flex-row md:justify-center md:px-12">
+          <div className="text-center">
+            Powered By <a href="https://axistechgroup.com/" target="_blank" rel="noopener noreferrer" className="hover:text-teal-light font-medium transition-colors">AxisTechGroup</a>
           </div>
         </div>
       </div>

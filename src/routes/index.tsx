@@ -40,18 +40,18 @@ function Index() {
     <div className="min-h-screen bg-white">
       <Navbar />
       <main>
-        <Hero />
-        <About />
-        <Services />
-        <SmileGallery />
-        <Team />
+        <div id="home"><Hero /></div>
+        <div id="about"><About /></div>
+        <div id="services"><Services /></div>
+        <div id="smile-gallery"><SmileGallery /></div>
+        <div id="our-dentists"><Team /></div>
         <Reviews />
         <WhyChoose />
         <Features />
-        <Hours />
+        <div id="contact-us"><Hours /></div>
         <RoutineCTA />
         <FAQ />
-        <Blog />
+        <div id="blog"><Blog /></div>
       </main>
       <Footer />
     </div>

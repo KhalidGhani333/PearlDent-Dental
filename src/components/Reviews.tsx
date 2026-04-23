@@ -47,18 +47,8 @@ export function Reviews() {
           </h2>
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-[300px_1fr] md:items-center">
-          <Reveal className="text-center md:text-left">
-            <div className="font-serif text-5xl font-bold text-teal">EXCELLENT</div>
-            <div className="mt-2 text-2xl tracking-widest text-gold">★★★★★</div>
-            <div className="mt-2 text-muted-foreground">Based on 1,100+ verified reviews</div>
-            <div className="mt-4 flex items-center justify-center gap-2 md:justify-start">
-              <GoogleG />
-              <span className="font-semibold text-navy">Google Reviews</span>
-            </div>
-          </Reveal>
-
-          <div className="group relative -mr-6 overflow-hidden md:-mr-12">
+        <div className="mt-12">
+          <div className="group relative overflow-hidden">
             <div className="flex animate-scroll-x gap-5 pause-on-hover" style={{ width: "max-content" }}>
               {[...reviews, ...reviews].map((r, i) => (
                 <ReviewCard key={i} r={r} />

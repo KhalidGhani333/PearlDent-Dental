@@ -2,8 +2,11 @@ import { useRef, useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { Reveal, TealLabel, slideInLeft, slideInRight } from "./Section";
 import { Wave } from "./Wave";
-import before from "@/assets/before.jpg";
-import after from "@/assets/after.jpg";
+import before from "@/assets/3.jpg";
+import after from "@/assets/4.jpg";
+import thumb1 from "@/assets/1.jpg";
+import thumb2 from "@/assets/2.jpg";
+import thumb3 from "@/assets/5.jpg";
 
 function BeforeAfter() {
   const ref = useRef<HTMLDivElement>(null);
@@ -35,12 +38,6 @@ function BeforeAfter() {
           style={{ width: `${10000 / pos}%` }}
           loading="lazy"
         />
-      </div>
-      <div className="absolute bottom-3 left-3 rounded-full bg-navy/80 px-3 py-1 text-xs font-medium uppercase tracking-wider text-white">
-        Before
-      </div>
-      <div className="absolute bottom-3 right-3 rounded-full bg-teal/90 px-3 py-1 text-xs font-medium uppercase tracking-wider text-white">
-        After
       </div>
       <div className="absolute top-0 bottom-0 w-[2px] bg-white shadow-pearl" style={{ left: `${pos}%` }} />
       <button
@@ -90,7 +87,7 @@ export function SmileGallery() {
           <Reveal variant={slideInRight}>
             <BeforeAfter />
             <div className="mt-4 grid grid-cols-3 gap-3">
-              {[before, after, before].map((src, i) => (
+              {[thumb1, thumb2, thumb3].map((src, i) => (
                 <motion.div
                   whileHover={{ scale: 1.04 }}
                   key={i}

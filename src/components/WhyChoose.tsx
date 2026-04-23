@@ -4,7 +4,7 @@ import family from "@/assets/why-family.jpg";
 export function WhyChoose() {
   return (
     <section className="bg-white py-24 md:py-28">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 md:grid-cols-2 md:items-center md:px-12">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 md:grid-cols-2 md:items-center md:px-12">
         <Reveal variant={slideInLeft}>
           <TealLabel>Private Dental Care in Marylebone</TealLabel>
           <h2 className="mt-3 font-serif text-4xl text-navy md:text-5xl">
@@ -26,14 +26,14 @@ export function WhyChoose() {
             Book Your Appointment
           </button>
         </Reveal>
-        <Reveal variant={slideInRight}>
+        <Reveal variant={slideInRight} className="mx-auto w-full max-w-lg md:max-w-none">
           <img
             src={family}
             alt="Smiling family"
             loading="lazy"
             width={1280}
             height={1024}
-            className="h-[460px] w-full rounded-2xl object-cover shadow-pearl md:h-[540px]"
+            className="mx-auto h-[400px] w-full max-w-md rounded-2xl object-cover shadow-pearl md:h-[480px] lg:max-w-lg"
           />
         </Reveal>
       </div>
