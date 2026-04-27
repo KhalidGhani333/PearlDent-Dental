@@ -15,23 +15,6 @@ import { Blog } from "@/components/Blog";
 import { Footer } from "@/components/Footer";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "PearlDent Care & Aesthetics — Private Dentist in Marylebone, London" },
-      {
-        name: "description",
-        content:
-          "Award-winning private dental care on Harley Street, Marylebone. GDC registered, CQC regulated. Invisalign, implants, veneers, whitening. Book today.",
-      },
-      { property: "og:title", content: "PearlDent Care & Aesthetics — Marylebone, London" },
-      {
-        property: "og:description",
-        content:
-          "Premium private dentistry in the heart of Marylebone. Same-week appointments, 0% finance, 4.9★ on Google.",
-      },
-      { property: "og:type", content: "website" },
-    ],
-  }),
   component: Index,
 });
 
